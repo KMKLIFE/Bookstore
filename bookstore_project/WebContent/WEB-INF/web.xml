@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>bookstore</display-name>
+	<resource-ref>
+		<res-ref-name>jdbc/myoracle</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.book.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>com.book.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/LogoutController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SignupController</servlet-name>
+		<servlet-class>com.book.controller.SignupController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignupController</servlet-name>
+		<url-pattern>/SignupController</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateidController</servlet-name>
+		<servlet-class>com.book.controller.CreateidController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateidController</servlet-name>
+		<url-pattern>/CreateidController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>BookController</servlet-name>
+		<servlet-class>com.book.controller.BookController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookController</servlet-name>
+		<url-pattern>/BookController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>MembersSelectAllController</servlet-name>
+		<servlet-class>com.book.controller.MembersSelectAllController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MembersSelectAllController</servlet-name>
+		<url-pattern>/MembersSelectAllController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>PageController</servlet-name>
+		<servlet-class>com.book.controller.PageController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PageController</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>
